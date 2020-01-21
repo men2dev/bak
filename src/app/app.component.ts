@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,9 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title: string = 'Solicitud BAK';
+  title: string;
   languages: string[];
-  private translateService : TranslateService;
+  private translateService: TranslateService;
 
   constructor(translate: TranslateService) {
     translate.addLangs(['es', 'eu']);
@@ -18,7 +18,9 @@ export class AppComponent {
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/es|eu/) ? browserLang : 'es');
 
-    this.languages =  translate.getLangs();
+    this.languages = translate.getLangs();
+    this.title = translate.instant('MSX000001');
+
     this.translateService = translate;
   }
 }

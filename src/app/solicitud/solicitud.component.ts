@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators
+} from '@angular/forms';
 
 @Component({
   selector: 'app-solicitud',
@@ -6,10 +11,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./solicitud.component.scss']
 })
 export class SolicitudComponent implements OnInit {
+  solicitud: FormGroup = this.fb.group({
+    nif: [null, Validators.required]
+  });
 
-  constructor() { }
+  constructor(private fb: FormBuilder) {
 
-  ngOnInit() {
   }
 
+  ngOnInit() {}
+
+  onSubmit() {
+    console.log(this.solicitud.value);
+  }
 }

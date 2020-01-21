@@ -1,2 +1,26 @@
-<div>{{ 'EUSKERA' | translate }}</div>
-<div>{{ 'CASTELLANO' | translate }}</div>
+<p>
+  La solicitud de Bak no exige una identificación presencial; por ello su
+  activación y emisión se inicia a través de un código de activación, de un solo
+  uso, que permite obtener la contraseña Bak de forma on-line.
+</p>
+<p>
+  Introduzca los datos que se indican a continuación y se generará una carta con
+  el código de activación que será remitida a su domicilio fiscal. Una vez tenga
+  en su poder el código de activación, podrá realizar el alta de Bak a través de
+  la página de Izenpe:
+  <a href="https://www.izenpe.eus/bak_dfb">https://www.izenpe.eus/bak_dfb</a>
+</p>
+
+<mat-card>
+  <form [formGroup]="solicitud" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>NIF</mat-label>
+      <input formControlName="nif" matInput placeholder="NIF" required/>
+      <mat-hint>(letra incluida)</mat-hint>
+      <mat-error *ngIf="solicitud.get('nif').invalid && solicitud.get('nif').touched">El campo es requerido</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Primary</button>
+  </form>
+
+</mat-card>
+
