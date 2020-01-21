@@ -3,7 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<< HEAD
     "bak": {
       "projectType": "application",
       "schematics": {
@@ -14,42 +13,22 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-=======
-    "demo": {
-      "root": "",
-      "sourceRoot": "src",
-      "projectType": "application",
-      "prefix": "app",
-      "schematics": {},
->>>>>>> 43ed7038f79e75753a4cc3a08f64c5e8e4374b12
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
             "outputPath": "dist/bak",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
-=======
-            "outputPath": "dist/demo",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
->>>>>>> 43ed7038f79e75753a4cc3a08f64c5e8e4374b12
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
               "src/styles.scss"
-=======
-              "src/styles.css"
->>>>>>> 43ed7038f79e75753a4cc3a08f64c5e8e4374b12
             ],
             "scripts": []
           },
@@ -69,7 +48,6 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-<<<<<<< HEAD
               "buildOptimizer": true,
               "budgets": [
                 {
@@ -83,39 +61,24 @@
                   "maximumError": "10kb"
                 }
               ]
-=======
-              "buildOptimizer": true
->>>>>>> 43ed7038f79e75753a4cc3a08f64c5e8e4374b12
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-<<<<<<< HEAD
             "browserTarget": "bak:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "bak:build:production"
-=======
-            "browserTarget": "demo:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "demo:build:production"
->>>>>>> 43ed7038f79e75753a4cc3a08f64c5e8e4374b12
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
             "browserTarget": "bak:build"
-=======
-            "browserTarget": "demo:build"
->>>>>>> 43ed7038f79e75753a4cc3a08f64c5e8e4374b12
           }
         },
         "test": {
@@ -123,7 +86,6 @@
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
-<<<<<<< HEAD
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
@@ -134,38 +96,20 @@
               "src/styles.scss"
             ],
             "scripts": []
-=======
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "styles.css"
-            ],
-            "scripts": [],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ]
->>>>>>> 43ed7038f79e75753a4cc3a08f64c5e8e4374b12
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-<<<<<<< HEAD
               "tsconfig.app.json",
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
-=======
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
->>>>>>> 43ed7038f79e75753a4cc3a08f64c5e8e4374b12
             ],
             "exclude": [
               "**/node_modules/**"
             ]
           }
-<<<<<<< HEAD
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
@@ -182,11 +126,4 @@
       }
     }},
   "defaultProject": "bak"
-=======
-        }
-      }
-    }
-  },
-  "defaultProject": "demo"
->>>>>>> 43ed7038f79e75753a4cc3a08f64c5e8e4374b12
 }
