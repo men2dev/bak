@@ -11,12 +11,12 @@ import {
   styleUrls: ['./solicitud.component.scss']
 })
 export class SolicitudComponent implements OnInit {
-  solicitud: FormGroup = this.fb.group({
-    nif: [null, Validators.required]
-  });
+  solicitud: FormGroup ;
 
   constructor(private fb: FormBuilder) {
-
+    this.solicitud = fb.group({
+      nif: [null, Validators.required]
+    });
   }
 
   ngOnInit() {}
