@@ -1,0 +1,9 @@
+<mat-button-toggle-group
+  name="languages"
+  color="primary"
+  aria-label="Available languages"
+>
+  <mat-button-toggle *ngFor="let lang of languages" value="{{ lang }}" (click)="onLanguageSelected(lang)">{{
+    lang | translate | uppercase
+  }}</mat-button-toggle>
+</mat-button-toggle-group>
