@@ -12,7 +12,10 @@ import {
 })
 export class SolicitudComponent implements OnInit {
   solicitud: FormGroup = this.fb.group({
-    nif: [null, Validators.required]
+    nif: [null, Validators.required],
+    fechaNacimiento :[null, Validators.required],
+    codigoPostal:[null, Validators.required],
+    portal : [null, Validators.required]
   });
 
   constructor(private fb: FormBuilder) {
