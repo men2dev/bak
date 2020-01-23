@@ -9,11 +9,13 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+@import 'palette.scss';
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$bak-primary: mat-palette($mat-pink);
-$bak-accent: mat-palette($mat-indigo, A200, A100, A400);
+$bak-primary: mat-palette($afa-red-wine);
+$bak-accent: mat-palette($afa-gray, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $bak-warn: mat-palette($mat-red);
