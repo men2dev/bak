@@ -22,7 +22,7 @@
         fxLayoutGap="20px"
         fxLayoutGap.lt-md="0px"
       >
-        <mat-form-field appearance="outline" fxFlex>
+        <mat-form-field appearance="outline" fxFlex="50%">
           <mat-label>NIF</mat-label>
           <input formControlName="nif" matInput placeholder="NIF" required />
           <mat-hint>(letra incluida)</mat-hint>
@@ -60,7 +60,7 @@
         fxLayoutGap="20px"
         fxLayoutGap.lt-md="0px"
       >
-        <mat-form-field appearance="outline" fxFlex>
+        <mat-form-field appearance="outline" fxFlex fxFlex="50%">
           <mat-label>Código postal</mat-label>
           <input
             formControlName="codigoPostal"
@@ -93,8 +93,8 @@
           </mat-error>
         </mat-form-field>
       </div>
-      <div class="input-row" fxFlex>
-        <button mat-raised-button color="primary">Solicitar</button>
+      <div class="input-row"  fxLayout="row"  fxLayoutAlign="center">
+        <button mat-raised-button color="primary" fxFlex="50%">Solicitar</button>
       </div>
     </form>
   </mat-card>
